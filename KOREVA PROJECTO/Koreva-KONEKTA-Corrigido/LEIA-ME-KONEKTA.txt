@@ -1,0 +1,20 @@
+KONEKTA — COMO TESTAR A DEMONSTRAÇÃO
+
+IMPORTANTE: NÃO abra cliente.html e profissional.html directamente através de Ficheiro / file://.
+Quando páginas diferentes são abertas desta forma, o navegador pode isolar o armazenamento local e os painéis deixam de partilhar os mesmos pedidos e propostas.
+
+FORMA CORRECTA:
+1. Extraia a pasta Koreva-KONEKTA-Corrigido para o computador.
+2. Entre na pasta extraída.
+3. Faça duplo clique em INICIAR-KONEKTA.bat.
+4. O navegador abrirá http://127.0.0.1:8765/konekta/index.html.
+5. Use a navegação do próprio KONEKTA para abrir Cliente e Profissional.
+6. Crie um pedido no Cliente.
+7. Abra Profissional noutra aba, envie uma proposta.
+8. Regresse à aba Cliente ou actualize a página: a proposta aparecerá em Os meus pedidos > Propostas recebidas.
+9. Aceite a proposta no Cliente e volte ao Profissional para acompanhar o serviço.
+
+Se o comando 'py' não estiver disponível, instale Python para Windows ou execute, dentro desta pasta, o comando: python -m http.server 8765
+Depois abra: http://127.0.0.1:8765/konekta/index.html
+
+NOTA: é uma demonstração local. Não existe ainda backend, autenticação real, envio pela Internet, pagamentos ou sincronização entre computadores diferentes.
