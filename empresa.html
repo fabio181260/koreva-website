@@ -35,13 +35,33 @@
     a { color: inherit; text-decoration: none; }
     .container { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
     .topbar {
-      position: sticky; top: 0; z-index: 10;
+      position: relative; z-index: 10;
       border-bottom: 1px solid rgba(255,255,255,.08);
       background: rgba(4, 17, 32, .88);
-      backdrop-filter: blur(14px);
     }
     .nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; }
+    .koreva-logo-img {
+      display: block;
+      width: clamp(145px, 16vw, 180px);
+      max-width: 100%;
+      height: auto;
+      max-height: 48px;
+      object-fit: contain;
+    }
+    .nav .brand { flex: 0 0 auto; }
+    .core {
+      position: relative; z-index: 1; display: grid; place-items: center;
+      width: min(300px, 82%); min-height: 130px; padding: 22px;
+      border-radius: 28px; border: 1px solid rgba(0,183,255,.7);
+      background: rgba(5,25,45,.86);
+      box-shadow: 0 0 55px rgba(0,160,255,.2);
+    }
+    .core .koreva-logo-img {
+      width: min(220px, 100%);
+      max-height: 74px;
+    }
+    .footer-koreva-logo { width: 165px; max-height: 48px; }
     .brand-mark {
       display: grid; place-items: center; width: 42px; height: 42px;
       font-weight: 900; font-size: 35px; line-height: 1;
@@ -140,7 +160,9 @@
       .nav { min-height:68px; }
       .brand-name { font-size:15px; }
       .nav-actions { gap:0; }
-      .nav-actions .button { padding:10px 13px; font-size:11px; }
+      .nav-actions .button { padding:10px 11px; font-size:11px; }
+      .nav .koreva-logo-img { width:132px; max-height:40px; }
+      .footer-koreva-logo { width:150px; }
       .hero { padding:54px 0 46px; }
       h1 { letter-spacing:-2px; font-size:43px; }
       .hero-copy { font-size:15px; }
@@ -164,6 +186,7 @@
         <a href="#identidade">A empresa</a>
         <a href="#atuacao">Áreas de atuação</a>
         <a class="button" href="index.html#contacto">Falar connosco <span>↗</span></a>
+        <a class="button secondary" href="index.html" aria-label="Sair e voltar à página inicial">Sair <span>↗</span></a>
       </nav>
     </div>
   </header>
@@ -186,7 +209,7 @@
         </div>
         <div class="visual" aria-label="Ilustração gráfica da identidade tecnológica da Koreva">
           <div class="orbit"></div>
-          <div class="core">K</div>
+          <div class="core"><img src="images/logo/logo-koreva-transparent.png" alt="Koreva Technologies" class="koreva-logo-img"></div>
           <div class="float-card float-one"><strong>TECNOLOGIA</strong>Ideias transformadas em soluções</div>
           <div class="float-card float-two"><strong>INOVAÇÃO</strong>Digital · Estratégia · Evolução</div>
         </div>
@@ -322,9 +345,8 @@
 
   <footer>
     <div class="container footer-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">K</span>
-        <span><span class="brand-name">KOREVA</span><span class="brand-sub">TECHNOLOGIES</span></span>
+      <a class="brand" href="index.html" aria-label="Koreva Technologies — página inicial">
+        <img src="images/logo/logo-koreva-transparent.png" alt="Koreva Technologies" class="koreva-logo-img footer-koreva-logo">
       </a>
       <span>Tecnologia que transforma realidades.</span>
       <div class="footer-links">
