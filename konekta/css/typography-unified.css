@@ -1,0 +1,4 @@
+/* KONEKTA unified typography */
+:root{--konekta-font-family:"Inter",Arial,sans-serif}
+html,body,body *{font-family:var(--konekta-font-family)!important}
+input,button,select,textarea{font-family:var(--konekta-font-family)!important}
